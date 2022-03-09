@@ -1,0 +1,5 @@
+<div class="event" *ngIf="event">
+    <h2>{{ event.name }}</h2>
+    <p>{{ event.time | remainingTime: now }}</p>
+    <fa-icon [icon]="deleteIcon" (click)="onDelete()"></fa-icon>
+</div>

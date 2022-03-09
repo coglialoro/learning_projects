@@ -1,0 +1,12 @@
+<form>
+    <textarea
+        [(ngModel)]="text"
+        name="text"
+        placeholder="Start type your note here..."
+    ></textarea>
+    <label for="markdown"
+        >Markdown
+        <input type="checkbox" [(ngModel)]="isMarkdown" name="markdown"
+    /></label>
+    <button (click)="onSave()">Save</button>
+</form>

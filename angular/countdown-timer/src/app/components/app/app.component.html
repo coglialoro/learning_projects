@@ -1,0 +1,8 @@
+<main class="app">
+    <h1>Event Cooldown</h1>
+    <app-add-event (eventAdded)="handleAddEvent($event)"></app-add-event>
+    <app-events-list
+        (eventDeleted)="handleDeleteEvent($event)"
+        [events]="events"
+    ></app-events-list>
+</main>

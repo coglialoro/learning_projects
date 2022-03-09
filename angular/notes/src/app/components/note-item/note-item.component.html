@@ -1,0 +1,24 @@
+<div *ngIf="note">
+    <div class="note" *ngIf="!isEditing">
+        <div
+            class="text"
+            [innerHTML]="note.isMarkdown ? (note.text | marked) : note.text"
+        ></div>
+        <div class="buttons">
+            <button (click)="onEdit()">Edit</button>
+            <button (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+
+    <div class="note" *ngIf="isEditing">
+        <textarea [(ngModel)]="text" name="text"></textarea>
+        <label for="markdown"
+            >Markdown
+            <input type="checkbox" [(ngModel)]="isMarkdown" name="markdown"
+        /></label>
+        <div class="buttons">
+            <button (click)="onSave()">Save</button>
+            <button (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+</div>

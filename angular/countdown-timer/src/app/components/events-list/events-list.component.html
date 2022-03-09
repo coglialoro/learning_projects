@@ -1,0 +1,7 @@
+<div class="events">
+    <app-event-item
+        *ngFor="let event of events"
+        [event]="event"
+        (eventDeleted)="onEventDeleted($event)"
+    ></app-event-item>
+</div>

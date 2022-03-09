@@ -1,0 +1,5 @@
+<form [formGroup]="addEventForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Event name" />
+    <input type="datetime-local" formControlName="time" />
+    <button type="submit" [disabled]="!addEventForm.valid">Submit</button>
+</form>

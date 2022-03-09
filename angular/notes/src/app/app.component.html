@@ -1,0 +1,9 @@
+<main>
+    <app-create-note (createdNote)="addNote($event)"></app-create-note>
+    <app-note-item
+        *ngFor="let note of notes"
+        [note]="note"
+        (editedNote)="editNote($event)"
+        (deletedNote)="deleteNote($event)"
+    ></app-note-item>
+</main>

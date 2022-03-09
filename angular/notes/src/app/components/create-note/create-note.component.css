@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+textarea,
+button,
+label {
+    padding: 10px;
+    margin: 10px;
+}
