@@ -1,0 +1,91 @@
+:root {
+    --window-color: teal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background-color: lightgray;
+}
+
+.resizable {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 5px 1fr 5px;
+    grid-template-columns: 5px 1fr 5px;
+    grid-template-areas:
+        "nw n ne"
+        "w c e"
+        "sw s se";
+}
+
+.nw {
+    grid-area: nw;
+    cursor: nw-resize;
+}
+
+.n {
+    grid-area: n;
+    cursor: n-resize;
+}
+
+.ne {
+    grid-area: ne;
+    cursor: ne-resize;
+}
+
+.w {
+    grid-area: w;
+    cursor: w-resize;
+}
+
+.e {
+    grid-area: e;
+    cursor: e-resize;
+}
+
+.sw {
+    grid-area: sw;
+    cursor: sw-resize;
+}
+
+.s {
+    grid-area: s;
+    cursor: s-resize;
+}
+
+.se {
+    grid-area: se;
+    cursor: se-resize;
+}
+
+.frame {
+    border: 1px solid black;
+    overflow: hidden;
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-header {
+    padding: 5px;
+    cursor: move;
+    background-color: var(--window-color);
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: auto;
+    left: auto;
+    z-index: 1000;
+}
+
+.close-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
